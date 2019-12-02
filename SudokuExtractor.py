@@ -260,7 +260,7 @@ def extract_digit(img, rect, size):
 def get_digits(img, squares, size):
     digits = []
     img = pre_process_image(img.copy(), skip_dilate=True)
-    cv2.imwrite('./tmo.jpg', img)
+    cv2.imwrite('./tmpimg/tmo.jpg', img)
     for square in squares:
         digits.append(extract_digit(img, square, size))
     return digits
